@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>taktel</title>
+</head>
+<body>
+    <div class="form-container">
+        <form onsubmit="return handleSubmit(event)">
+            <div class="form-group">
+                <label for="name">اسمت چیه</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">چند سالته</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <button type="submit">ثبت</button>
+        </form>
+    </div>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            window.location.href = `confirmation.html?name=${encodeURIComponent(name)}&age=${encodeURIComponent(age)}`;
+            return false;
+        }
+    </script>
+</body>
+</html> 

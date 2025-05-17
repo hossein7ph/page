@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css"/>
+  <title>پیام تایید</title>
+</head>
+<body>
+  <div class="message-container">
+    <p id="message"></p>
+  </div>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get("name");
+    const age = urlParams.get("age");
+    const message = `سلام عزیزم
+ میدونم که اسمت <span class="highlight">${name}</span> و میدونم <span class="highlight">${age}</span> سالته
+ولی این موضوع ذره ای برام اهمیت نداره
+تنهاچیزی که برام مهمه اینه که بیای فروشگاه ما و خرید کنی تا من بتونم چک هامو پاس کنم
+
+عشق منیا ولی اگه نیای 
+خیلی خری
+ایشالله بری زیر تریلی
+ابلفضلی خیلی نامردی 
+
+فدات بشم بازم خودت میدونی من اجبارت نمیکنم لینک پیجمو میزارم اگه دوسداشتی بیا ازم خرید کن اگه هم خرید نکردی خاک تو سرت 
+
+<a href="https://www.instagram.com/saritaktel" class="link" target="_blank" rel="noopener noreferrer">لینک فروشگاه من</a>`;
+
+      document.getElementById("message").innerHTML = message;
+    </script>
+  </body>
+</html>
